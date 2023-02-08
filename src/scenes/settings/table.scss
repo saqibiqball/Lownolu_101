@@ -1,0 +1,102 @@
+// More practical CSS...
+// using mobile first method (IE8,7 requires respond.js polyfill https://github.com/scottjehl/Respond)
+
+$breakpoint-alpha: 480px; // adjust to your needs
+$borderBotom: 1px solid lightgray;
+$boxShadow: 1px 1px 22px rgb(206, 217, 221);
+.responsive-table-input-matrix {
+  font-size: larger;
+  color: gray;
+  margin: 1em 2em;
+  min-width: 300px; // adjust to your needs
+  width: 95%;
+  border-collapse: collapse;
+  box-shadow: $boxShadow;
+  @media (min-width: $breakpoint-alpha) {
+    .responsive-table-input-matrix {
+      width: auto;
+    }
+  }
+
+  tr {
+    td {
+      border-bottom: $borderBotom;
+      text-align: left;
+      @media (min-width: $breakpoint-alpha) {
+        text-align: left;
+      }
+    }
+    & td:first-of-type {
+      text-align: left;
+    }
+  }
+
+  th {
+    display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!
+  }
+
+  td {
+    border-bottom: $borderBotom;
+    display: block;
+    &:first-child {
+      padding-top: 0.5em;
+    }
+    &:last-child {
+      padding-bottom: 0.5em;
+    }
+    &:before {
+      content: attr(data-th) ": "; // who knew you could do this? The internet, that's who.
+      font-weight: bold;
+      // optional stuff to make it look nicer
+      width: 9em; // magic number :( adjust according to your own content
+      display: inline-block;
+      // end options
+      @media (min-width: $breakpoint-alpha) {
+        display: none;
+      }
+    }
+  }
+
+  & th:first-of-type {
+    text-align: left;
+  }
+
+  th,
+  td {
+    border-bottom: $borderBotom;
+    text-align: left;
+    @media (min-width: $breakpoint-alpha) {
+      display: table-cell;
+      padding: 0.25em 0.5em;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+// presentational styling
+.responsive-table {
+  border-collapse: collapse;
+  background: #fafafa;
+  color: rgb(10, 9, 9);
+  border-radius: 0.4em;
+  box-shadow: $boxShadow;
+  th,
+  td {
+    border-bottom: $borderBotom;
+    margin: 0.5em 1em;
+    @media (min-width: $breakpoint-alpha) {
+      padding: 1em !important;
+    }
+  }
+  th,
+  td:before {
+    border-bottom: $borderBotom;
+    color: rgb(12, 12, 11);
+  }
+}

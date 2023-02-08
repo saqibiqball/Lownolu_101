@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+.app,
+.content {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: ghostwhite;
+}
+
+.app {
+  display: flex;
+  position: sticky;
+}
+
+

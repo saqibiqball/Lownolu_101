@@ -1,0 +1,54 @@
+$breakpoint-alpha: 480px; // adjust to your needs
+$borderBotom: 1px solid lightgray;
+$boxShadow: 1px 1px 22px rgb(206, 217, 221);
+
+.UpdateBox {
+  font-size: larger;
+  color: gray;
+  background-color: white;
+  margin: 3em 1em 2em 2em;
+  min-width: 300px; // adjust to your needs
+  width: 95%;
+  border-collapse: collapse;
+  box-shadow: $boxShadow;
+
+}
+
+/* Full-width input fields */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="phone"],
+input[type="number"],
+input[type="Select"],
+select[id="select"],
+textarea[id="textarea"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(224, 222, 222);
+  box-sizing: border-box;
+}
+button[id="update"]{
+  border-radius: 0%;
+  border-style: none;
+  padding: 2% 3% 2% 3%;
+  color: white;
+  cursor: pointer;
+  background-color:#0000ffd5;
+}
+button[id="cancel"] {
+  border-radius: 0%;
+  border-style: none;
+  padding: 2% 3% 2% 3%;
+  cursor: pointer;
+  // color: white;
+  // background-color:#0000ffd5;
+
+}
+
+.container {
+  padding: 16px;
+}
