@@ -15,7 +15,7 @@ const BarChart = ({ isDashboard = false }) => {
         axis: {
           domain: {
             line: {
-              stroke: colors.grey[400],
+              stroke: colors.grey[100],
             },
           },
           legend: {
