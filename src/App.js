@@ -23,7 +23,7 @@ import { useLocation } from "react-router-dom";
 import { menu } from "./menu";
 import CustomerManagement from "./scenes/CustomerManagement/CustomerManagement";
 import BusinessManagement from "./scenes/BusinessManagement/BusinessManagemnet";
-import MembershipPlan from "./scenes/managementPlan/managementPlan";
+import MembershipPlan from "./scenes/managementPlan";
 import Divider from "@mui/material/Divider";
 
 function App() {
@@ -46,7 +46,7 @@ function App() {
         <Sidebar isSidebar={isSidebar} />
         <Box sx={{ flexGrow: 1, flexDirection: "column" }}>
           <Header title={headerTitle} />
-          
+
           <main className="content">
             <Routes>
               <Route path="/" element={<Dashboard />} />
